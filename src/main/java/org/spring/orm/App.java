@@ -20,13 +20,13 @@ public class App
         StudentDao studentDao = (StudentDao) context.getBean("studentdao",StudentDao.class);
         System.out.println(studentDao);
 
-        //int result = studentDao.insert(st4);
-        //System.out.println("Insertion done "+result);
-        //System.out.println(studentDao.select(3));
-        //System.out.println(studentDao.selectAll());
+        int result = studentDao.insert(st4);
+        System.out.println("Insertion done "+result);
+        System.out.println(studentDao.select(3));
+        System.out.println(studentDao.selectAll());
         studentDao.update(new Student(3,"Shashi Kumar","Barhi"));
-        //System.out.println(studentDao.selectAll());
-        //studentDao.delete(1);
+        System.out.println(studentDao.selectAll());
+        studentDao.delete(1);
         System.out.println(studentDao.selectAll());
 
     }
